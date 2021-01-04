@@ -1,0 +1,20 @@
+.profile-wrapper {
+    height:500px;
+    width:400px;
+    position:absolute;
+    border:1px solid black;
+    margin-left:500px;
+}
+.photo {
+    position: absolute;
+    top:0px;
+    right:0px;
+    height:120px;
+    width:120px;
+    border:1px solid black;
+}
+.edit-profile {
+    position: absolute;
+    bottom:10px;
+    left:130px;
+}

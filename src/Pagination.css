@@ -1,0 +1,31 @@
+/* .......Pagination.js.......... */
+
+.pagination-container{
+    margin-right: 10px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .............PaginationBtn.js........ */
+.pageBtn {
+    padding: 3px 6px;
+    margin: 3px; 
+    min-width: 20px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+.pageBtn.active {
+    background-color: dodgerblue;
+}
+.pageBtn:hover {
+    background-color: rgba(30,144,255,0.6);
+}
