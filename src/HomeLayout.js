@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import CreateQuestion from './CreateQuestion';
 import Footer from './Footer'
@@ -12,8 +12,19 @@ import Profilepage from './Profilepage';
 
 function HomeLayout(props) {
      const username = (props.user && props.user.username) || "Let's Learn from Each other";
+     const [loader,setloader]=useState(true);
      const [tabView, setTabView] = useState(<Home/>)
+     useEffect(()=>{
+         console.log("from use effect of home layout props is ",props.user)
+        if(props.user===undefined||props.user===""||props.user===null){
+            console.log("inside if condition of use effect");
+            setloader(true);
+        }else{
+        setloader(false);
+        }
+     },[props])
      const tabHandler = (idx)=>{
+        
          if(idx===2){
              setTabView(<Review/>);
          }
@@ -37,7 +48,7 @@ function HomeLayout(props) {
                 <Question />
             </Route>
             <Route path="/profile">
-                <Profilepage user={props.user} />
+               {loader?null:<Profilepage user={props.user} />}
             </Route>
             <Route exact path="/">
                 <Tab options={["Questions","Pool","Review"]} tabHandler={tabHandler}/>

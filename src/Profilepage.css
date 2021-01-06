@@ -1,20 +1,31 @@
 .profile-wrapper {
     height:500px;
     width:400px;
-    position:absolute;
+    position: relative;;
     border:1px solid black;
-    margin-left:500px;
+    margin:auto;
+    box-shadow:2px 2px #1e90ff;
+}
+.profile-wrapper1 {
+    height:520px;
+    width:400px;
+    position: relative;;
+    border:1px solid black;
+    margin:auto;
+    box-shadow: lightblue;
 }
 .photo {
-    position: absolute;
-    top:0px;
-    right:0px;
-    height:120px;
-    width:120px;
+   
+    height:200px;
+    width:100%;
     border:1px solid black;
 }
 .edit-profile {
     position: absolute;
     bottom:10px;
     left:130px;
+}
+.fa {
+    margin: 10px;
+    font-size: 15px;
 }

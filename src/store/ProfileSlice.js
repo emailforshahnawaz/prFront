@@ -63,9 +63,11 @@ export const ProfileSlice=createSlice({
         },
         [updateProfileInfo.fulfilled]:(state,action)=>{
             console.log("profile updated successfully");
-            const {fname,lname,email,gender,country,city,gitlink,username}=action.payload;
+            const {fname,lname,email,gender,country,city,gitlink,username,dob,education}=action.payload;
             const ud=state.find(s=>s.username===username)
             ud.fname=fname
+            ud.education.push(education)
+            ud.dob=dob
             ud.lname=lname
             ud.email=email
             ud.gender=gender
